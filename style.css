@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+body {
+  background: #f0f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif, "Lucida Sans", Arial, sans-serif;
+}
+
+.box-container__input {
+  width: 30rem;
+  height: 4rem;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.4rem;
+  font-size: 1.3rem;
+  padding-left: 0.9rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.box-container__input:focus {
+  outline: none;
+}
+
+.checkbox__row {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.checkbox__row input {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #b0e4dc;
+  border-radius: 0.1rem;
+  cursor: pointer;
+}
+
+.checkbox__row input[type="checkbox"]:checked {
+  background: #54787b;
+}
+
+.checkbox__row input[type="checkbox"]:checked:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  color: #fff;
+}
+
+.box-container__generate {
+  background: none;
+  border: none;
+}
+
+.box-container__generate:hover {
+  cursor: pointer;
+}
+
+.box-container__copy-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  width: 2rem;
+  height: 3rem;
+}
+
+.box-container__submit-area {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox__row-container {
+  display: flex;
+}
+
+.checkbox__row-container-text {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+.checkbox__row-container-text span {
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}

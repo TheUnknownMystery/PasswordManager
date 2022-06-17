@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Manager</title>
+  </head>
+  <body>
+    <div class="box-container">
+      <div class="box-container__submit-area">
+        <input type="text" class="box-container__input" id="input"/>
+        <button class="box-container__generate" onclick='CopyText()'>
+          <img
+            src="/assets/clipboard-image.svg"
+            alt="copy clipboard"
+            class="box-container__copy-image"
+          />
+        </button>
+      </div>
+
+      <div class="checkbox__row">
+        <div class="checkbox__row-container">
+          <input type="checkbox" class="symbols" name="symbols" />
+          <p class='checkbox__row-container-text'>Include Symbols <span>(@#$!%^$)</span></p>
+        </div>
+        <div class="checkbox__row-container">
+          <input type="checkbox" class="numbers" name="numbers" />
+          <p class='checkbox__row-container-text'>Include Numbers <span>(1,2,3,4,5,6)</span></p>
+        </div class="checkbox__row-container">
+        <div class="checkbox__row-container">
+          <input type="checkbox" class="letters" name="letters" />
+          <p class='checkbox__row-container-text'>Include Letters <span>(b,g,t,r,t)</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="/main.js"></script>
+  </body>
+</html>
