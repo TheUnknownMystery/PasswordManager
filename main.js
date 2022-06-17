@@ -30,7 +30,7 @@ const SYMBOLS = [
   "/",
   "?",
 ];
-const NUMBERS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+const NUMBERS = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const LETTERS = [
   "a",
   "b",
@@ -88,6 +88,12 @@ isAllowedLetters[0].addEventListener("click", function () {
     }
 
     document.getElementById("input").value = password;
+  } else {
+    LETTERS.forEach((LETTER) => {
+      password = password.replace(LETTER, "");
+    });
+
+    document.getElementById("input").value = password;
   }
 });
 
@@ -99,12 +105,7 @@ isAllowedNumbers[0].addEventListener("click", function () {
 
     document.getElementById("input").value = password;
   } else {
-    console.log("not checked");
-    NUMBERS.forEach((NUMBER) => {
-      password = password.replace(NUMBER, "");
-      console.log(password);
-    });
-
+    password = password.replace(/1|2|3|4|5|6|7|8|9/g, "");
     document.getElementById("input").value = password;
   }
 });
@@ -114,6 +115,12 @@ isAllowedSymbols[0].addEventListener("click", function () {
     for (let i = 0; i < 4; i++) {
       password += GetRandomElement(SYMBOLS);
     }
+
+    document.getElementById("input").value = password;
+  } else {
+    SYMBOLS.forEach((SYMBOL) => {
+      password = password.replace(SYMBOL, "");
+    });
 
     document.getElementById("input").value = password;
   }
